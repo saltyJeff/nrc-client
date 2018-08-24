@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="https://www.gstatic.com/firebasejs/5.4.0/firebase.js"></script>
+		<script src="https://cdn.firebase.com/libs/firebaseui/3.3.0/firebaseui.js"></script>
+		<link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.3.0/firebaseui.css" />
+		<link rel="stylesheet" href="asciidoc-modified.css">
+		<script>
+		// Initialize Firebase
+			var config = {
+				apiKey: "AIzaSyAJIO7wURhYpgIkjbGzK6TNbasStzKOCVY",
+				authDomain: "im-server-35839.firebaseapp.com",
+				databaseURL: "https://im-server-35839.firebaseio.com",
+				projectId: "im-server-35839",
+				storageBucket: "im-server-35839.appspot.com",
+				messagingSenderId: "422562383523"
+			};
+			firebase.initializeApp(config);
+		</script>
+		<style>
+			html, body {
+				width: 100vw;
+				height: 100vh;
+				margin: 0px;
+				padding: 0px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="app" style="display: hidden"></div>
+		<div id="login">
+			<h1>Dank NRC meme</h1>
+			<div id="firebaseui-auth-container"></div>
+		</div>
+		<script src="src/index.tsx"></script>
+	</body>
+</html>

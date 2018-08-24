@@ -1,0 +1,27 @@
+{
+  "name": "boilerplate-change-this",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "parcel ./index.html --open",
+    "build": "parcel build ./index.html"
+  },
+  "dependencies": {
+    "asciidoctor.js": "^1.5.7-rc.1",
+    "mobx": "^5.0.3",
+    "mobx-react": "^5.2.3",
+    "react": "^16.4.1",
+    "react-adaptivecards": "^0.1.3",
+    "react-dom": "^16.4.1",
+    "react-infinite-scroller": "^1.2.0",
+    "timeago.js": "^3.0.2"
+  },
+  "devDependencies": {
+    "@types/react": "^16.4.7",
+    "@types/react-dom": "^16.0.6",
+    "@types/react-infinite-scroller": "^1.0.7",
+    "node-sass": "^4.9.3",
+    "typescript": "^3.0.1"
+  }
+}

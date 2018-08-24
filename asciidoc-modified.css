@@ -1,0 +1,1678 @@
+@charset "UTF-8";
+#msgScroll {
+  /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
+  /* Uncomment @import statement below to use as custom stylesheet */
+  /* Modified by prefixing everything with #msgScroll by saltyJeff */
+  /*@import "https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700";*/
+}
+#msgScroll article, #msgScroll aside, #msgScroll details, #msgScroll figcaption, #msgScroll figure, #msgScroll footer, #msgScroll header, #msgScroll hgroup, #msgScroll main, #msgScroll nav, #msgScroll section, #msgScroll summary {
+  display: block;
+}
+#msgScroll audio, #msgScroll canvas, #msgScroll video {
+  display: inline-block;
+}
+#msgScroll audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+#msgScroll script {
+  display: none !important;
+}
+#msgScroll html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+#msgScroll a {
+  background: transparent;
+}
+#msgScroll a:focus {
+  outline: thin dotted;
+}
+#msgScroll a:active, #msgScroll a:hover {
+  outline: 0;
+}
+#msgScroll h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+#msgScroll abbr[title] {
+  border-bottom: 1px dotted;
+}
+#msgScroll b, #msgScroll strong {
+  font-weight: bold;
+}
+#msgScroll dfn {
+  font-style: italic;
+}
+#msgScroll hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+#msgScroll mark {
+  background: #ff0;
+  color: #000;
+}
+#msgScroll code, #msgScroll kbd, #msgScroll pre, #msgScroll samp {
+  font-family: monospace;
+  font-size: 1em;
+}
+#msgScroll pre {
+  white-space: pre-wrap;
+}
+#msgScroll q {
+  quotes: "“" "”" "‘" "’";
+}
+#msgScroll small {
+  font-size: 80%;
+}
+#msgScroll sub, #msgScroll sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+#msgScroll sup {
+  top: -0.5em;
+}
+#msgScroll sub {
+  bottom: -0.25em;
+}
+#msgScroll img {
+  border: 0;
+}
+#msgScroll svg:not(:root) {
+  overflow: hidden;
+}
+#msgScroll figure {
+  margin: 0;
+}
+#msgScroll fieldset {
+  border: 1px solid silver;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+#msgScroll legend {
+  border: 0;
+  padding: 0;
+}
+#msgScroll button, #msgScroll input, #msgScroll select, #msgScroll textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+}
+#msgScroll button, #msgScroll input {
+  line-height: normal;
+}
+#msgScroll button, #msgScroll select {
+  text-transform: none;
+}
+#msgScroll button, #msgScroll html input[type=button], #msgScroll input[type=reset], #msgScroll input[type=submit] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+#msgScroll button[disabled], #msgScroll html input[disabled] {
+  cursor: default;
+}
+#msgScroll input[type=checkbox], #msgScroll input[type=radio] {
+  box-sizing: border-box;
+  padding: 0;
+}
+#msgScroll button::-moz-focus-inner, #msgScroll input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+#msgScroll textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+#msgScroll table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+#msgScroll *, #msgScroll *::before, #msgScroll *::after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+#msgScroll html, #msgScroll body {
+  font-size: 100%;
+}
+#msgScroll body {
+  background: #fff;
+  color: rgba(0, 0, 0, 0.8);
+  padding: 0;
+  margin: 0;
+  font-family: "Noto Serif", "DejaVu Serif", serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1;
+  position: relative;
+  cursor: auto;
+  tab-size: 4;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+#msgScroll a:hover {
+  cursor: pointer;
+}
+#msgScroll img, #msgScroll object, #msgScroll embed {
+  max-width: 100%;
+  height: auto;
+}
+#msgScroll object, #msgScroll embed {
+  height: 100%;
+}
+#msgScroll img {
+  -ms-interpolation-mode: bicubic;
+}
+#msgScroll .left {
+  float: left !important;
+}
+#msgScroll .right {
+  float: right !important;
+}
+#msgScroll .text-left {
+  text-align: left !important;
+}
+#msgScroll .text-right {
+  text-align: right !important;
+}
+#msgScroll .text-center {
+  text-align: center !important;
+}
+#msgScroll .text-justify {
+  text-align: justify !important;
+}
+#msgScroll .hide {
+  display: none;
+}
+#msgScroll img, #msgScroll object, #msgScroll svg {
+  display: inline-block;
+  vertical-align: middle;
+}
+#msgScroll textarea {
+  height: auto;
+  min-height: 50px;
+}
+#msgScroll select {
+  width: 100%;
+}
+#msgScroll .center {
+  margin-left: auto;
+  margin-right: auto;
+}
+#msgScroll .stretch {
+  width: 100%;
+}
+#msgScroll .subheader, #msgScroll .admonitionblock td.content > .title, #msgScroll .audioblock > .title, #msgScroll .exampleblock > .title, #msgScroll .imageblock > .title, #msgScroll .listingblock > .title, #msgScroll .literalblock > .title, #msgScroll .stemblock > .title, #msgScroll .openblock > .title, #msgScroll .paragraph > .title, #msgScroll .quoteblock > .title, #msgScroll table.tableblock > .title, #msgScroll .verseblock > .title, #msgScroll .videoblock > .title, #msgScroll .dlist > .title, #msgScroll .olist > .title, #msgScroll .ulist > .title, #msgScroll .qlist > .title, #msgScroll .hdlist > .title {
+  line-height: 1.45;
+  color: #7a2518;
+  font-weight: 400;
+  margin-top: 0;
+  margin-bottom: 0.25em;
+}
+#msgScroll div, #msgScroll dl, #msgScroll dt, #msgScroll dd, #msgScroll ul, #msgScroll ol, #msgScroll li, #msgScroll h1, #msgScroll h2, #msgScroll h3, #msgScroll #toctitle, #msgScroll .sidebarblock > .content > .title, #msgScroll h4, #msgScroll h5, #msgScroll h6, #msgScroll pre, #msgScroll form, #msgScroll p, #msgScroll blockquote, #msgScroll th, #msgScroll td {
+  margin: 0;
+  padding: 0;
+  direction: ltr;
+}
+#msgScroll a {
+  color: #2156a5;
+  text-decoration: underline;
+  line-height: inherit;
+}
+#msgScroll a:hover, #msgScroll a:focus {
+  color: #1d4b8f;
+}
+#msgScroll a img {
+  border: none;
+}
+#msgScroll p {
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 1em;
+  line-height: 1.6;
+  margin-bottom: 1.25em;
+  text-rendering: optimizeLegibility;
+}
+#msgScroll p aside {
+  font-size: 0.875em;
+  line-height: 1.35;
+  font-style: italic;
+}
+#msgScroll h1, #msgScroll h2, #msgScroll h3, #msgScroll #toctitle, #msgScroll .sidebarblock > .content > .title, #msgScroll h4, #msgScroll h5, #msgScroll h6 {
+  font-family: "Open Sans", "DejaVu Sans", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  color: #ba3925;
+  text-rendering: optimizeLegibility;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  line-height: 1.0125em;
+}
+#msgScroll h1 small, #msgScroll h2 small, #msgScroll h3 small, #msgScroll #toctitle small, #msgScroll .sidebarblock > .content > .title small, #msgScroll h4 small, #msgScroll h5 small, #msgScroll h6 small {
+  font-size: 60%;
+  color: #e99b8f;
+  line-height: 0;
+}
+#msgScroll h1 {
+  font-size: 2.125em;
+}
+#msgScroll h2 {
+  font-size: 1.6875em;
+}
+#msgScroll h3, #msgScroll #toctitle, #msgScroll .sidebarblock > .content > .title {
+  font-size: 1.375em;
+}
+#msgScroll h4, #msgScroll h5 {
+  font-size: 1.125em;
+}
+#msgScroll h6 {
+  font-size: 1em;
+}
+#msgScroll hr {
+  border: solid #ddddd8;
+  border-width: 1px 0 0;
+  clear: both;
+  margin: 1.25em 0 1.1875em;
+  height: 0;
+}
+#msgScroll em, #msgScroll i {
+  font-style: italic;
+  line-height: inherit;
+}
+#msgScroll strong, #msgScroll b {
+  font-weight: bold;
+  line-height: inherit;
+}
+#msgScroll small {
+  font-size: 60%;
+  line-height: inherit;
+}
+#msgScroll code {
+  font-family: "Droid Sans Mono", "DejaVu Sans Mono", monospace;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.9);
+}
+#msgScroll ul, #msgScroll ol, #msgScroll dl {
+  font-size: 1em;
+  line-height: 1.6;
+  margin-bottom: 1.25em;
+  list-style-position: outside;
+  font-family: inherit;
+}
+#msgScroll ul, #msgScroll ol {
+  margin-left: 1.5em;
+}
+#msgScroll ul li ul, #msgScroll ul li ol {
+  margin-left: 1.25em;
+  margin-bottom: 0;
+  font-size: 1em;
+}
+#msgScroll ul.square li ul, #msgScroll ul.circle li ul, #msgScroll ul.disc li ul {
+  list-style: inherit;
+}
+#msgScroll ul.square {
+  list-style-type: square;
+}
+#msgScroll ul.circle {
+  list-style-type: circle;
+}
+#msgScroll ul.disc {
+  list-style-type: disc;
+}
+#msgScroll ol li ul, #msgScroll ol li ol {
+  margin-left: 1.25em;
+  margin-bottom: 0;
+}
+#msgScroll dl dt {
+  margin-bottom: 0.3125em;
+  font-weight: bold;
+}
+#msgScroll dl dd {
+  margin-bottom: 1.25em;
+}
+#msgScroll abbr, #msgScroll acronym {
+  text-transform: uppercase;
+  font-size: 90%;
+  color: rgba(0, 0, 0, 0.8);
+  border-bottom: 1px dotted #ddd;
+  cursor: help;
+}
+#msgScroll abbr {
+  text-transform: none;
+}
+#msgScroll blockquote {
+  margin: 0 0 1.25em;
+  padding: 0.5625em 1.25em 0 1.1875em;
+  border-left: 1px solid #ddd;
+}
+#msgScroll blockquote cite {
+  display: block;
+  font-size: 0.9375em;
+  color: rgba(0, 0, 0, 0.6);
+}
+#msgScroll blockquote cite::before {
+  content: "— ";
+}
+#msgScroll blockquote cite a, #msgScroll blockquote cite a:visited {
+  color: rgba(0, 0, 0, 0.6);
+}
+#msgScroll blockquote, #msgScroll blockquote p {
+  line-height: 1.6;
+  color: rgba(0, 0, 0, 0.85);
+}
+@media screen and (min-width: 768px) {
+  #msgScroll h1, #msgScroll h2, #msgScroll h3, #msgScroll #toctitle, #msgScroll .sidebarblock > .content > .title, #msgScroll h4, #msgScroll h5, #msgScroll h6 {
+    line-height: 1.2;
+  }
+  #msgScroll h1 {
+    font-size: 2.75em;
+  }
+  #msgScroll h2 {
+    font-size: 2.3125em;
+  }
+  #msgScroll h3, #msgScroll #toctitle, #msgScroll .sidebarblock > .content > .title {
+    font-size: 1.6875em;
+  }
+  #msgScroll h4 {
+    font-size: 1.4375em;
+  }
+}
+#msgScroll table {
+  background: #fff;
+  margin-bottom: 1.25em;
+  border: solid 1px #dedede;
+}
+#msgScroll table thead, #msgScroll table tfoot {
+  background: #f7f8f7;
+}
+#msgScroll table thead tr th, #msgScroll table thead tr td, #msgScroll table tfoot tr th, #msgScroll table tfoot tr td {
+  padding: 0.5em 0.625em 0.625em;
+  font-size: inherit;
+  color: rgba(0, 0, 0, 0.8);
+  text-align: left;
+}
+#msgScroll table tr th, #msgScroll table tr td {
+  padding: 0.5625em 0.625em;
+  font-size: inherit;
+  color: rgba(0, 0, 0, 0.8);
+}
+#msgScroll table tr.even, #msgScroll table tr.alt, #msgScroll table tr:nth-of-type(even) {
+  background: #f8f8f7;
+}
+#msgScroll table thead tr th, #msgScroll table tfoot tr th, #msgScroll table tbody tr td, #msgScroll table tr td, #msgScroll table tfoot tr td {
+  display: table-cell;
+  line-height: 1.6;
+}
+#msgScroll h1, #msgScroll h2, #msgScroll h3, #msgScroll #toctitle, #msgScroll .sidebarblock > .content > .title, #msgScroll h4, #msgScroll h5, #msgScroll h6 {
+  line-height: 1.2;
+  word-spacing: -0.05em;
+}
+#msgScroll h1 strong, #msgScroll h2 strong, #msgScroll h3 strong, #msgScroll #toctitle strong, #msgScroll .sidebarblock > .content > .title strong, #msgScroll h4 strong, #msgScroll h5 strong, #msgScroll h6 strong {
+  font-weight: 400;
+}
+#msgScroll .clearfix::before, #msgScroll .clearfix::after, #msgScroll .float-group::before, #msgScroll .float-group::after {
+  content: " ";
+  display: table;
+}
+#msgScroll .clearfix::after, #msgScroll .float-group::after {
+  clear: both;
+}
+#msgScroll *:not(pre) > code {
+  font-size: 0.9375em;
+  font-style: normal !important;
+  letter-spacing: 0;
+  padding: 0.1em 0.5ex;
+  word-spacing: -0.15em;
+  background-color: #f7f7f8;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  line-height: 1.45;
+  text-rendering: optimizeSpeed;
+  word-wrap: break-word;
+}
+#msgScroll *:not(pre) > code.nobreak {
+  word-wrap: normal;
+}
+#msgScroll *:not(pre) > code.nowrap {
+  white-space: nowrap;
+}
+#msgScroll pre, #msgScroll pre > code {
+  line-height: 1.45;
+  color: rgba(0, 0, 0, 0.9);
+  font-family: "Droid Sans Mono", "DejaVu Sans Mono", monospace;
+  font-weight: 400;
+  text-rendering: optimizeSpeed;
+}
+#msgScroll em em {
+  font-style: normal;
+}
+#msgScroll strong strong {
+  font-weight: 400;
+}
+#msgScroll .keyseq {
+  color: rgba(51, 51, 51, 0.8);
+}
+#msgScroll kbd {
+  font-family: "Droid Sans Mono", "DejaVu Sans Mono", monospace;
+  display: inline-block;
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 0.65em;
+  line-height: 1.45;
+  background-color: #f7f7f7;
+  border: 1px solid #ccc;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 0 0 0.1em white inset;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 0 0 0.1em #fff inset;
+  margin: 0 0.15em;
+  padding: 0.2em 0.5em;
+  vertical-align: middle;
+  position: relative;
+  top: -0.1em;
+  white-space: nowrap;
+}
+#msgScroll .keyseq kbd:first-child {
+  margin-left: 0;
+}
+#msgScroll .keyseq kbd:last-child {
+  margin-right: 0;
+}
+#msgScroll .menuseq, #msgScroll .menuref {
+  color: #000;
+}
+#msgScroll .menuseq b:not(.caret), #msgScroll .menuref {
+  font-weight: inherit;
+}
+#msgScroll .menuseq {
+  word-spacing: -0.02em;
+}
+#msgScroll .menuseq b.caret {
+  font-size: 1.25em;
+  line-height: 0.8;
+}
+#msgScroll .menuseq i.caret {
+  font-weight: bold;
+  text-align: center;
+  width: 0.45em;
+}
+#msgScroll b.button::before, #msgScroll b.button::after {
+  position: relative;
+  top: -1px;
+  font-weight: 400;
+}
+#msgScroll b.button::before {
+  content: "[";
+  padding: 0 3px 0 2px;
+}
+#msgScroll b.button::after {
+  content: "]";
+  padding: 0 2px 0 3px;
+}
+#msgScroll p a > code:hover {
+  color: rgba(0, 0, 0, 0.9);
+}
+#msgScroll #header, #msgScroll #content, #msgScroll #footnotes, #msgScroll #footer {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: 62.5em;
+  *zoom: 1;
+  position: relative;
+  padding-left: 0.9375em;
+  padding-right: 0.9375em;
+}
+#msgScroll #header::before, #msgScroll #header::after, #msgScroll #content::before, #msgScroll #content::after, #msgScroll #footnotes::before, #msgScroll #footnotes::after, #msgScroll #footer::before, #msgScroll #footer::after {
+  content: " ";
+  display: table;
+}
+#msgScroll #header::after, #msgScroll #content::after, #msgScroll #footnotes::after, #msgScroll #footer::after {
+  clear: both;
+}
+#msgScroll #content {
+  margin-top: 1.25em;
+}
+#msgScroll #content::before {
+  content: none;
+}
+#msgScroll #header > h1:first-child {
+  color: rgba(0, 0, 0, 0.85);
+  margin-top: 2.25rem;
+  margin-bottom: 0;
+}
+#msgScroll #header > h1:first-child + #toc {
+  margin-top: 8px;
+  border-top: 1px solid #ddddd8;
+}
+#msgScroll #header > h1:only-child, #msgScroll body.toc2 #header > h1:nth-last-child(2) {
+  border-bottom: 1px solid #ddddd8;
+  padding-bottom: 8px;
+}
+#msgScroll #header .details {
+  border-bottom: 1px solid #ddddd8;
+  line-height: 1.45;
+  padding-top: 0.25em;
+  padding-bottom: 0.25em;
+  padding-left: 0.25em;
+  color: rgba(0, 0, 0, 0.6);
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-flow: row wrap;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+}
+#msgScroll #header .details span:first-child {
+  margin-left: -0.125em;
+}
+#msgScroll #header .details span.email a {
+  color: rgba(0, 0, 0, 0.85);
+}
+#msgScroll #header .details br {
+  display: none;
+}
+#msgScroll #header .details br + span::before {
+  content: " – ";
+}
+#msgScroll #header .details br + span.author::before {
+  content: " ⋅ ";
+  color: rgba(0, 0, 0, 0.85);
+}
+#msgScroll #header .details br + span#revremark::before {
+  content: " | ";
+}
+#msgScroll #header #revnumber {
+  text-transform: capitalize;
+}
+#msgScroll #header #revnumber::after {
+  content: " ";
+}
+#msgScroll #content > h1:first-child:not([class]) {
+  color: rgba(0, 0, 0, 0.85);
+  border-bottom: 1px solid #ddddd8;
+  padding-bottom: 8px;
+  margin-top: 0;
+  padding-top: 1rem;
+  margin-bottom: 1.25rem;
+}
+#msgScroll #toc {
+  border-bottom: 1px solid #efefed;
+  padding-bottom: 0.5em;
+}
+#msgScroll #toc > ul {
+  margin-left: 0.125em;
+}
+#msgScroll #toc ul.sectlevel0 > li > a {
+  font-style: italic;
+}
+#msgScroll #toc ul.sectlevel0 ul.sectlevel1 {
+  margin: 0.5em 0;
+}
+#msgScroll #toc ul {
+  font-family: "Open Sans", "DejaVu Sans", sans-serif;
+  list-style-type: none;
+}
+#msgScroll #toc li {
+  line-height: 1.3334;
+  margin-top: 0.3334em;
+}
+#msgScroll #toc a {
+  text-decoration: none;
+}
+#msgScroll #toc a:active {
+  text-decoration: underline;
+}
+#msgScroll #toctitle {
+  color: #7a2518;
+  font-size: 1.2em;
+}
+@media screen and (min-width: 768px) {
+  #msgScroll #toctitle {
+    font-size: 1.375em;
+  }
+  #msgScroll body.toc2 {
+    padding-left: 15em;
+    padding-right: 0;
+  }
+  #msgScroll #toc.toc2 {
+    margin-top: 0 !important;
+    background-color: #f8f8f7;
+    position: fixed;
+    width: 15em;
+    left: 0;
+    top: 0;
+    border-right: 1px solid #efefed;
+    border-top-width: 0 !important;
+    border-bottom-width: 0 !important;
+    z-index: 1000;
+    padding: 1.25em 1em;
+    height: 100%;
+    overflow: auto;
+  }
+  #msgScroll #toc.toc2 #toctitle {
+    margin-top: 0;
+    margin-bottom: 0.8rem;
+    font-size: 1.2em;
+  }
+  #msgScroll #toc.toc2 > ul {
+    font-size: 0.9em;
+    margin-bottom: 0;
+  }
+  #msgScroll #toc.toc2 ul ul {
+    margin-left: 0;
+    padding-left: 1em;
+  }
+  #msgScroll #toc.toc2 ul.sectlevel0 ul.sectlevel1 {
+    padding-left: 0;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+  #msgScroll body.toc2.toc-right {
+    padding-left: 0;
+    padding-right: 15em;
+  }
+  #msgScroll body.toc2.toc-right #toc.toc2 {
+    border-right-width: 0;
+    border-left: 1px solid #efefed;
+    left: auto;
+    right: 0;
+  }
+}
+@media screen and (min-width: 1280px) {
+  #msgScroll body.toc2 {
+    padding-left: 20em;
+    padding-right: 0;
+  }
+  #msgScroll #toc.toc2 {
+    width: 20em;
+  }
+  #msgScroll #toc.toc2 #toctitle {
+    font-size: 1.375em;
+  }
+  #msgScroll #toc.toc2 > ul {
+    font-size: 0.95em;
+  }
+  #msgScroll #toc.toc2 ul ul {
+    padding-left: 1.25em;
+  }
+  #msgScroll body.toc2.toc-right {
+    padding-left: 0;
+    padding-right: 20em;
+  }
+}
+#msgScroll #content #toc {
+  border-style: solid;
+  border-width: 1px;
+  border-color: #e0e0dc;
+  margin-bottom: 1.25em;
+  padding: 1.25em;
+  background: #f8f8f7;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+}
+#msgScroll #content #toc > :first-child {
+  margin-top: 0;
+}
+#msgScroll #content #toc > :last-child {
+  margin-bottom: 0;
+}
+#msgScroll #footer {
+  max-width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 1.25em;
+}
+#msgScroll #footer-text {
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.44;
+}
+#msgScroll #content {
+  margin-bottom: 0.625em;
+}
+#msgScroll .sect1 {
+  padding-bottom: 0.625em;
+}
+@media screen and (min-width: 768px) {
+  #msgScroll #content {
+    margin-bottom: 1.25em;
+  }
+  #msgScroll .sect1 {
+    padding-bottom: 1.25em;
+  }
+}
+#msgScroll .sect1:last-child {
+  padding-bottom: 0;
+}
+#msgScroll .sect1 + .sect1 {
+  border-top: 1px solid #efefed;
+}
+#msgScroll #content h1 > a.anchor, #msgScroll h2 > a.anchor, #msgScroll h3 > a.anchor, #msgScroll #toctitle > a.anchor, #msgScroll .sidebarblock > .content > .title > a.anchor, #msgScroll h4 > a.anchor, #msgScroll h5 > a.anchor, #msgScroll h6 > a.anchor {
+  position: absolute;
+  z-index: 1001;
+  width: 1.5ex;
+  margin-left: -1.5ex;
+  display: block;
+  text-decoration: none !important;
+  visibility: hidden;
+  text-align: center;
+  font-weight: 400;
+}
+#msgScroll #content h1 > a.anchor::before, #msgScroll h2 > a.anchor::before, #msgScroll h3 > a.anchor::before, #msgScroll #toctitle > a.anchor::before, #msgScroll .sidebarblock > .content > .title > a.anchor::before, #msgScroll h4 > a.anchor::before, #msgScroll h5 > a.anchor::before, #msgScroll h6 > a.anchor::before {
+  content: "§";
+  font-size: 0.85em;
+  display: block;
+  padding-top: 0.1em;
+}
+#msgScroll #content h1:hover > a.anchor, #msgScroll #content h1 > a.anchor:hover, #msgScroll h2:hover > a.anchor, #msgScroll h2 > a.anchor:hover, #msgScroll h3:hover > a.anchor, #msgScroll #toctitle:hover > a.anchor, #msgScroll .sidebarblock > .content > .title:hover > a.anchor, #msgScroll h3 > a.anchor:hover, #msgScroll #toctitle > a.anchor:hover, #msgScroll .sidebarblock > .content > .title > a.anchor:hover, #msgScroll h4:hover > a.anchor, #msgScroll h4 > a.anchor:hover, #msgScroll h5:hover > a.anchor, #msgScroll h5 > a.anchor:hover, #msgScroll h6:hover > a.anchor, #msgScroll h6 > a.anchor:hover {
+  visibility: visible;
+}
+#msgScroll #content h1 > a.link, #msgScroll h2 > a.link, #msgScroll h3 > a.link, #msgScroll #toctitle > a.link, #msgScroll .sidebarblock > .content > .title > a.link, #msgScroll h4 > a.link, #msgScroll h5 > a.link, #msgScroll h6 > a.link {
+  color: #ba3925;
+  text-decoration: none;
+}
+#msgScroll #content h1 > a.link:hover, #msgScroll h2 > a.link:hover, #msgScroll h3 > a.link:hover, #msgScroll #toctitle > a.link:hover, #msgScroll .sidebarblock > .content > .title > a.link:hover, #msgScroll h4 > a.link:hover, #msgScroll h5 > a.link:hover, #msgScroll h6 > a.link:hover {
+  color: #a53221;
+}
+#msgScroll .audioblock, #msgScroll .imageblock, #msgScroll .literalblock, #msgScroll .listingblock, #msgScroll .stemblock, #msgScroll .videoblock {
+  margin-bottom: 1.25em;
+}
+#msgScroll .admonitionblock td.content > .title, #msgScroll .audioblock > .title, #msgScroll .exampleblock > .title, #msgScroll .imageblock > .title, #msgScroll .listingblock > .title, #msgScroll .literalblock > .title, #msgScroll .stemblock > .title, #msgScroll .openblock > .title, #msgScroll .paragraph > .title, #msgScroll .quoteblock > .title, #msgScroll table.tableblock > .title, #msgScroll .verseblock > .title, #msgScroll .videoblock > .title, #msgScroll .dlist > .title, #msgScroll .olist > .title, #msgScroll .ulist > .title, #msgScroll .qlist > .title, #msgScroll .hdlist > .title {
+  text-rendering: optimizeLegibility;
+  text-align: left;
+  font-family: "Noto Serif", "DejaVu Serif", serif;
+  font-size: 1rem;
+  font-style: italic;
+}
+#msgScroll table.tableblock.fit-content > caption.title {
+  white-space: nowrap;
+  width: 0;
+}
+#msgScroll .paragraph.lead > p, #msgScroll #preamble > .sectionbody > [class=paragraph]:first-of-type p {
+  font-size: 1.21875em;
+  line-height: 1.6;
+  color: rgba(0, 0, 0, 0.85);
+}
+#msgScroll table.tableblock #preamble > .sectionbody > [class=paragraph]:first-of-type p {
+  font-size: inherit;
+}
+#msgScroll .admonitionblock > table {
+  border-collapse: separate;
+  border: 0;
+  background: none;
+  width: 100%;
+}
+#msgScroll .admonitionblock > table td.icon {
+  text-align: center;
+  width: 80px;
+}
+#msgScroll .admonitionblock > table td.icon img {
+  max-width: none;
+}
+#msgScroll .admonitionblock > table td.icon .title {
+  font-weight: bold;
+  font-family: "Open Sans", "DejaVu Sans", sans-serif;
+  text-transform: uppercase;
+}
+#msgScroll .admonitionblock > table td.content {
+  padding-left: 1.125em;
+  padding-right: 1.25em;
+  border-left: 1px solid #ddddd8;
+  color: rgba(0, 0, 0, 0.6);
+}
+#msgScroll .admonitionblock > table td.content > :last-child > :last-child {
+  margin-bottom: 0;
+}
+#msgScroll .exampleblock > .content {
+  border-style: solid;
+  border-width: 1px;
+  border-color: #e6e6e6;
+  margin-bottom: 1.25em;
+  padding: 1.25em;
+  background: #fff;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+}
+#msgScroll .exampleblock > .content > :first-child {
+  margin-top: 0;
+}
+#msgScroll .exampleblock > .content > :last-child {
+  margin-bottom: 0;
+}
+#msgScroll .sidebarblock {
+  border-style: solid;
+  border-width: 1px;
+  border-color: #e0e0dc;
+  margin-bottom: 1.25em;
+  padding: 1.25em;
+  background: #f8f8f7;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+}
+#msgScroll .sidebarblock > :first-child {
+  margin-top: 0;
+}
+#msgScroll .sidebarblock > :last-child {
+  margin-bottom: 0;
+}
+#msgScroll .sidebarblock > .content > .title {
+  color: #7a2518;
+  margin-top: 0;
+  text-align: center;
+}
+#msgScroll .exampleblock > .content > :last-child > :last-child, #msgScroll .exampleblock > .content .olist > ol > li:last-child > :last-child, #msgScroll .exampleblock > .content .ulist > ul > li:last-child > :last-child, #msgScroll .exampleblock > .content .qlist > ol > li:last-child > :last-child, #msgScroll .sidebarblock > .content > :last-child > :last-child, #msgScroll .sidebarblock > .content .olist > ol > li:last-child > :last-child, #msgScroll .sidebarblock > .content .ulist > ul > li:last-child > :last-child, #msgScroll .sidebarblock > .content .qlist > ol > li:last-child > :last-child {
+  margin-bottom: 0;
+}
+#msgScroll .literalblock pre, #msgScroll .listingblock pre:not(.highlight), #msgScroll .listingblock pre[class=highlight], #msgScroll .listingblock pre[class^="highlight "], #msgScroll .listingblock pre.CodeRay, #msgScroll .listingblock pre.prettyprint {
+  background: #f7f7f8;
+}
+#msgScroll .sidebarblock .literalblock pre, #msgScroll .sidebarblock .listingblock pre:not(.highlight), #msgScroll .sidebarblock .listingblock pre[class=highlight], #msgScroll .sidebarblock .listingblock pre[class^="highlight "], #msgScroll .sidebarblock .listingblock pre.CodeRay, #msgScroll .sidebarblock .listingblock pre.prettyprint {
+  background: #f2f1f1;
+}
+#msgScroll .literalblock pre, #msgScroll .literalblock pre[class], #msgScroll .listingblock pre, #msgScroll .listingblock pre[class] {
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  word-wrap: break-word;
+  padding: 1em;
+  font-size: 0.8125em;
+}
+#msgScroll .literalblock pre.nowrap, #msgScroll .literalblock pre[class].nowrap, #msgScroll .listingblock pre.nowrap, #msgScroll .listingblock pre[class].nowrap {
+  overflow-x: auto;
+  white-space: pre;
+  word-wrap: normal;
+}
+@media screen and (min-width: 768px) {
+  #msgScroll .literalblock pre, #msgScroll .literalblock pre[class], #msgScroll .listingblock pre, #msgScroll .listingblock pre[class] {
+    font-size: 0.90625em;
+  }
+}
+@media screen and (min-width: 1280px) {
+  #msgScroll .literalblock pre, #msgScroll .literalblock pre[class], #msgScroll .listingblock pre, #msgScroll .listingblock pre[class] {
+    font-size: 1em;
+  }
+}
+#msgScroll .literalblock.output pre {
+  color: #f7f7f8;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+#msgScroll .listingblock pre.highlightjs {
+  padding: 0;
+}
+#msgScroll .listingblock pre.highlightjs > code {
+  padding: 1em;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+}
+#msgScroll .listingblock pre.prettyprint {
+  border-width: 0;
+}
+#msgScroll .listingblock > .content {
+  position: relative;
+}
+#msgScroll .listingblock code[data-lang]::before {
+  display: none;
+  content: attr(data-lang);
+  position: absolute;
+  font-size: 0.75em;
+  top: 0.425rem;
+  right: 0.5rem;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #999;
+}
+#msgScroll .listingblock:hover code[data-lang]::before {
+  display: block;
+}
+#msgScroll .listingblock.terminal pre .command::before {
+  content: attr(data-prompt);
+  padding-right: 0.5em;
+  color: #999;
+}
+#msgScroll .listingblock.terminal pre .command:not([data-prompt])::before {
+  content: "$";
+}
+#msgScroll table.pyhltable {
+  border-collapse: separate;
+  border: 0;
+  margin-bottom: 0;
+  background: none;
+}
+#msgScroll table.pyhltable td {
+  vertical-align: top;
+  padding-top: 0;
+  padding-bottom: 0;
+  line-height: 1.45;
+}
+#msgScroll table.pyhltable td.code {
+  padding-left: 0.75em;
+  padding-right: 0;
+}
+#msgScroll pre.pygments .lineno, #msgScroll table.pyhltable td:not(.code) {
+  color: #999;
+  padding-left: 0;
+  padding-right: 0.5em;
+  border-right: 1px solid #ddddd8;
+}
+#msgScroll pre.pygments .lineno {
+  display: inline-block;
+  margin-right: 0.25em;
+}
+#msgScroll table.pyhltable .linenodiv {
+  background: none !important;
+  padding-right: 0 !important;
+}
+#msgScroll .quoteblock {
+  margin: 0 1em 1.25em 1.5em;
+  display: table;
+}
+#msgScroll .quoteblock > .title {
+  margin-left: -1.5em;
+  margin-bottom: 0.75em;
+}
+#msgScroll .quoteblock blockquote, #msgScroll .quoteblock blockquote p {
+  color: rgba(0, 0, 0, 0.85);
+  font-size: 1.15rem;
+  line-height: 1.75;
+  word-spacing: 0.1em;
+  letter-spacing: 0;
+  font-style: italic;
+  text-align: justify;
+}
+#msgScroll .quoteblock blockquote {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+#msgScroll .quoteblock blockquote::before {
+  content: "“";
+  float: left;
+  font-size: 2.75em;
+  font-weight: bold;
+  line-height: 0.6em;
+  margin-left: -0.6em;
+  color: #7a2518;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+#msgScroll .quoteblock blockquote > .paragraph:last-child p {
+  margin-bottom: 0;
+}
+#msgScroll .quoteblock .attribution {
+  margin-top: 0.5em;
+  margin-right: 0.5ex;
+  text-align: right;
+}
+#msgScroll .quoteblock .quoteblock {
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0.5em 0;
+  border-left: 3px solid rgba(0, 0, 0, 0.6);
+}
+#msgScroll .quoteblock .quoteblock blockquote {
+  padding: 0 0 0 0.75em;
+}
+#msgScroll .quoteblock .quoteblock blockquote::before {
+  display: none;
+}
+#msgScroll .verseblock {
+  margin: 0 1em 1.25em;
+}
+#msgScroll .verseblock pre {
+  font-family: "Open Sans", "DejaVu Sans", sans;
+  font-size: 1.15rem;
+  color: rgba(0, 0, 0, 0.85);
+  font-weight: 300;
+  text-rendering: optimizeLegibility;
+}
+#msgScroll .verseblock pre strong {
+  font-weight: 400;
+}
+#msgScroll .verseblock .attribution {
+  margin-top: 1.25rem;
+  margin-left: 0.5ex;
+}
+#msgScroll .quoteblock .attribution, #msgScroll .verseblock .attribution {
+  font-size: 0.9375em;
+  line-height: 1.45;
+  font-style: italic;
+}
+#msgScroll .quoteblock .attribution br, #msgScroll .verseblock .attribution br {
+  display: none;
+}
+#msgScroll .quoteblock .attribution cite, #msgScroll .verseblock .attribution cite {
+  display: block;
+  letter-spacing: -0.025em;
+  color: rgba(0, 0, 0, 0.6);
+}
+#msgScroll .quoteblock.abstract {
+  margin: 0 1em 1.25em;
+  display: block;
+}
+#msgScroll .quoteblock.abstract > .title {
+  margin: 0 0 0.375em;
+  font-size: 1.15em;
+  text-align: center;
+}
+#msgScroll .quoteblock.abstract blockquote, #msgScroll .quoteblock.abstract blockquote p {
+  word-spacing: 0;
+  line-height: 1.6;
+}
+#msgScroll .quoteblock.abstract blockquote::before, #msgScroll .quoteblock.abstract p::before {
+  display: none;
+}
+#msgScroll table.tableblock {
+  max-width: 100%;
+  border-collapse: separate;
+}
+#msgScroll p.tableblock:last-child {
+  margin-bottom: 0;
+}
+#msgScroll td.tableblock > .content {
+  margin-bottom: -1.25em;
+}
+#msgScroll table.tableblock, #msgScroll th.tableblock, #msgScroll td.tableblock {
+  border: 0 solid #dedede;
+}
+#msgScroll table.grid-all > thead > tr > .tableblock, #msgScroll table.grid-all > tbody > tr > .tableblock {
+  border-width: 0 1px 1px 0;
+}
+#msgScroll table.grid-all > tfoot > tr > .tableblock {
+  border-width: 1px 1px 0 0;
+}
+#msgScroll table.grid-cols > * > tr > .tableblock {
+  border-width: 0 1px 0 0;
+}
+#msgScroll table.grid-rows > thead > tr > .tableblock, #msgScroll table.grid-rows > tbody > tr > .tableblock {
+  border-width: 0 0 1px;
+}
+#msgScroll table.grid-rows > tfoot > tr > .tableblock {
+  border-width: 1px 0 0;
+}
+#msgScroll table.grid-all > * > tr > .tableblock:last-child, #msgScroll table.grid-cols > * > tr > .tableblock:last-child {
+  border-right-width: 0;
+}
+#msgScroll table.grid-all > tbody > tr:last-child > .tableblock, #msgScroll table.grid-all > thead:last-child > tr > .tableblock, #msgScroll table.grid-rows > tbody > tr:last-child > .tableblock, #msgScroll table.grid-rows > thead:last-child > tr > .tableblock {
+  border-bottom-width: 0;
+}
+#msgScroll table.frame-all {
+  border-width: 1px;
+}
+#msgScroll table.frame-sides {
+  border-width: 0 1px;
+}
+#msgScroll table.frame-topbot, #msgScroll table.frame-ends {
+  border-width: 1px 0;
+}
+#msgScroll table.stripes-all tr, #msgScroll table.stripes-odd tr:nth-of-type(odd) {
+  background: #f8f8f7;
+}
+#msgScroll table.stripes-none tr, #msgScroll table.stripes-odd tr:nth-of-type(even) {
+  background: none;
+}
+#msgScroll th.halign-left, #msgScroll td.halign-left {
+  text-align: left;
+}
+#msgScroll th.halign-right, #msgScroll td.halign-right {
+  text-align: right;
+}
+#msgScroll th.halign-center, #msgScroll td.halign-center {
+  text-align: center;
+}
+#msgScroll th.valign-top, #msgScroll td.valign-top {
+  vertical-align: top;
+}
+#msgScroll th.valign-bottom, #msgScroll td.valign-bottom {
+  vertical-align: bottom;
+}
+#msgScroll th.valign-middle, #msgScroll td.valign-middle {
+  vertical-align: middle;
+}
+#msgScroll table thead th, #msgScroll table tfoot th {
+  font-weight: bold;
+}
+#msgScroll tbody tr th {
+  display: table-cell;
+  line-height: 1.6;
+  background: #f7f8f7;
+}
+#msgScroll tbody tr th, #msgScroll tbody tr th p, #msgScroll tfoot tr th, #msgScroll tfoot tr th p {
+  color: rgba(0, 0, 0, 0.8);
+  font-weight: bold;
+}
+#msgScroll p.tableblock > code:only-child {
+  background: none;
+  padding: 0;
+}
+#msgScroll p.tableblock {
+  font-size: 1em;
+}
+#msgScroll td > div.verse {
+  white-space: pre;
+}
+#msgScroll ol {
+  margin-left: 1.75em;
+}
+#msgScroll ul li ol {
+  margin-left: 1.5em;
+}
+#msgScroll dl dd {
+  margin-left: 1.125em;
+}
+#msgScroll dl dd:last-child, #msgScroll dl dd:last-child > :last-child {
+  margin-bottom: 0;
+}
+#msgScroll ol > li p, #msgScroll ul > li p, #msgScroll ul dd, #msgScroll ol dd, #msgScroll .olist .olist, #msgScroll .ulist .ulist, #msgScroll .ulist .olist, #msgScroll .olist .ulist {
+  margin-bottom: 0.625em;
+}
+#msgScroll ul.checklist, #msgScroll ul.none, #msgScroll ol.none, #msgScroll ul.no-bullet, #msgScroll ol.no-bullet, #msgScroll ol.unnumbered, #msgScroll ul.unstyled, #msgScroll ol.unstyled {
+  list-style-type: none;
+}
+#msgScroll ul.no-bullet, #msgScroll ol.no-bullet, #msgScroll ol.unnumbered {
+  margin-left: 0.625em;
+}
+#msgScroll ul.unstyled, #msgScroll ol.unstyled {
+  margin-left: 0;
+}
+#msgScroll ul.checklist {
+  margin-left: 0.625em;
+}
+#msgScroll ul.checklist li > p:first-child > .fa-square-o:first-child, #msgScroll ul.checklist li > p:first-child > .fa-check-square-o:first-child {
+  width: 1.25em;
+  font-size: 0.8em;
+  position: relative;
+  bottom: 0.125em;
+}
+#msgScroll ul.checklist li > p:first-child > input[type=checkbox]:first-child {
+  margin-right: 0.25em;
+}
+#msgScroll ul.inline {
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  -ms-flex-flow: row wrap;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  list-style: none;
+  margin: 0 0 0.625em -1.25em;
+}
+#msgScroll ul.inline > li {
+  margin-left: 1.25em;
+}
+#msgScroll .unstyled dl dt {
+  font-weight: 400;
+  font-style: normal;
+}
+#msgScroll ol.arabic {
+  list-style-type: decimal;
+}
+#msgScroll ol.decimal {
+  list-style-type: decimal-leading-zero;
+}
+#msgScroll ol.loweralpha {
+  list-style-type: lower-alpha;
+}
+#msgScroll ol.upperalpha {
+  list-style-type: upper-alpha;
+}
+#msgScroll ol.lowerroman {
+  list-style-type: lower-roman;
+}
+#msgScroll ol.upperroman {
+  list-style-type: upper-roman;
+}
+#msgScroll ol.lowergreek {
+  list-style-type: lower-greek;
+}
+#msgScroll .hdlist > table, #msgScroll .colist > table {
+  border: 0;
+  background: none;
+}
+#msgScroll .hdlist > table > tbody > tr, #msgScroll .colist > table > tbody > tr {
+  background: none;
+}
+#msgScroll td.hdlist1, #msgScroll td.hdlist2 {
+  vertical-align: top;
+  padding: 0 0.625em;
+}
+#msgScroll td.hdlist1 {
+  font-weight: bold;
+  padding-bottom: 1.25em;
+}
+#msgScroll .literalblock + .colist, #msgScroll .listingblock + .colist {
+  margin-top: -0.5em;
+}
+#msgScroll .colist td:not([class]):first-child {
+  padding: 0.4em 0.75em 0;
+  line-height: 1;
+  vertical-align: top;
+}
+#msgScroll .colist td:not([class]):first-child img {
+  max-width: none;
+}
+#msgScroll .colist td:not([class]):last-child {
+  padding: 0.25em 0;
+}
+#msgScroll .thumb, #msgScroll .th {
+  line-height: 0;
+  display: inline-block;
+  border: solid 4px #fff;
+  -webkit-box-shadow: 0 0 0 1px #ddd;
+  box-shadow: 0 0 0 1px #ddd;
+}
+#msgScroll .imageblock.left, #msgScroll .imageblock[style*="float: left"] {
+  margin: 0.25em 0.625em 1.25em 0;
+}
+#msgScroll .imageblock.right, #msgScroll .imageblock[style*="float: right"] {
+  margin: 0.25em 0 1.25em 0.625em;
+}
+#msgScroll .imageblock > .title {
+  margin-bottom: 0;
+}
+#msgScroll .imageblock.thumb, #msgScroll .imageblock.th {
+  border-width: 6px;
+}
+#msgScroll .imageblock.thumb > .title, #msgScroll .imageblock.th > .title {
+  padding: 0 0.125em;
+}
+#msgScroll .image.left, #msgScroll .image.right {
+  margin-top: 0.25em;
+  margin-bottom: 0.25em;
+  display: inline-block;
+  line-height: 0;
+}
+#msgScroll .image.left {
+  margin-right: 0.625em;
+}
+#msgScroll .image.right {
+  margin-left: 0.625em;
+}
+#msgScroll a.image {
+  text-decoration: none;
+  display: inline-block;
+}
+#msgScroll a.image object {
+  pointer-events: none;
+}
+#msgScroll sup.footnote, #msgScroll sup.footnoteref {
+  font-size: 0.875em;
+  position: static;
+  vertical-align: super;
+}
+#msgScroll sup.footnote a, #msgScroll sup.footnoteref a {
+  text-decoration: none;
+}
+#msgScroll sup.footnote a:active, #msgScroll sup.footnoteref a:active {
+  text-decoration: underline;
+}
+#msgScroll #footnotes {
+  padding-top: 0.75em;
+  padding-bottom: 0.75em;
+  margin-bottom: 0.625em;
+}
+#msgScroll #footnotes hr {
+  width: 20%;
+  min-width: 6.25em;
+  margin: -0.25em 0 0.75em;
+  border-width: 1px 0 0;
+}
+#msgScroll #footnotes .footnote {
+  padding: 0 0.375em 0 0.225em;
+  line-height: 1.3334;
+  font-size: 0.875em;
+  margin-left: 1.2em;
+  margin-bottom: 0.2em;
+}
+#msgScroll #footnotes .footnote a:first-of-type {
+  font-weight: bold;
+  text-decoration: none;
+  margin-left: -1.05em;
+}
+#msgScroll #footnotes .footnote:last-of-type {
+  margin-bottom: 0;
+}
+#msgScroll #content #footnotes {
+  margin-top: -0.625em;
+  margin-bottom: 0;
+  padding: 0.75em 0;
+}
+#msgScroll .gist .file-data > table {
+  border: 0;
+  background: #fff;
+  width: 100%;
+  margin-bottom: 0;
+}
+#msgScroll .gist .file-data > table td.line-data {
+  width: 99%;
+}
+#msgScroll div.unbreakable {
+  page-break-inside: avoid;
+}
+#msgScroll .big {
+  font-size: larger;
+}
+#msgScroll .small {
+  font-size: smaller;
+}
+#msgScroll .underline {
+  text-decoration: underline;
+}
+#msgScroll .overline {
+  text-decoration: overline;
+}
+#msgScroll .line-through {
+  text-decoration: line-through;
+}
+#msgScroll .aqua {
+  color: #00bfbf;
+}
+#msgScroll .aqua-background {
+  background-color: #00fafa;
+}
+#msgScroll .black {
+  color: #000;
+}
+#msgScroll .black-background {
+  background-color: #000;
+}
+#msgScroll .blue {
+  color: #0000bf;
+}
+#msgScroll .blue-background {
+  background-color: #0000fa;
+}
+#msgScroll .fuchsia {
+  color: #bf00bf;
+}
+#msgScroll .fuchsia-background {
+  background-color: #fa00fa;
+}
+#msgScroll .gray {
+  color: #606060;
+}
+#msgScroll .gray-background {
+  background-color: #7d7d7d;
+}
+#msgScroll .green {
+  color: #006000;
+}
+#msgScroll .green-background {
+  background-color: #007d00;
+}
+#msgScroll .lime {
+  color: #00bf00;
+}
+#msgScroll .lime-background {
+  background-color: #00fa00;
+}
+#msgScroll .maroon {
+  color: #600000;
+}
+#msgScroll .maroon-background {
+  background-color: #7d0000;
+}
+#msgScroll .navy {
+  color: #000060;
+}
+#msgScroll .navy-background {
+  background-color: #00007d;
+}
+#msgScroll .olive {
+  color: #606000;
+}
+#msgScroll .olive-background {
+  background-color: #7d7d00;
+}
+#msgScroll .purple {
+  color: #600060;
+}
+#msgScroll .purple-background {
+  background-color: #7d007d;
+}
+#msgScroll .red {
+  color: #bf0000;
+}
+#msgScroll .red-background {
+  background-color: #fa0000;
+}
+#msgScroll .silver {
+  color: #909090;
+}
+#msgScroll .silver-background {
+  background-color: #bcbcbc;
+}
+#msgScroll .teal {
+  color: #006060;
+}
+#msgScroll .teal-background {
+  background-color: #007d7d;
+}
+#msgScroll .white {
+  color: #bfbfbf;
+}
+#msgScroll .white-background {
+  background-color: #fafafa;
+}
+#msgScroll .yellow {
+  color: #bfbf00;
+}
+#msgScroll .yellow-background {
+  background-color: #fafa00;
+}
+#msgScroll span.icon > .fa {
+  cursor: default;
+}
+#msgScroll a span.icon > .fa {
+  cursor: inherit;
+}
+#msgScroll .admonitionblock td.icon [class^="fa icon-"] {
+  font-size: 2.5em;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  cursor: default;
+}
+#msgScroll .admonitionblock td.icon .icon-note::before {
+  content: "";
+  color: #19407c;
+}
+#msgScroll .admonitionblock td.icon .icon-tip::before {
+  content: "";
+  text-shadow: 1px 1px 2px rgba(155, 155, 0, 0.8);
+  color: #111;
+}
+#msgScroll .admonitionblock td.icon .icon-warning::before {
+  content: "";
+  color: #bf6900;
+}
+#msgScroll .admonitionblock td.icon .icon-caution::before {
+  content: "";
+  color: #bf3400;
+}
+#msgScroll .admonitionblock td.icon .icon-important::before {
+  content: "";
+  color: #bf0000;
+}
+#msgScroll .conum[data-value] {
+  display: inline-block;
+  color: #fff !important;
+  background-color: rgba(0, 0, 0, 0.8);
+  -webkit-border-radius: 100px;
+  border-radius: 100px;
+  text-align: center;
+  font-size: 0.75em;
+  width: 1.67em;
+  height: 1.67em;
+  line-height: 1.67em;
+  font-family: "Open Sans", "DejaVu Sans", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+}
+#msgScroll .conum[data-value] * {
+  color: #fff !important;
+}
+#msgScroll .conum[data-value] + b {
+  display: none;
+}
+#msgScroll .conum[data-value]::after {
+  content: attr(data-value);
+}
+#msgScroll pre .conum[data-value] {
+  position: relative;
+  top: -0.125em;
+}
+#msgScroll b.conum * {
+  color: inherit !important;
+}
+#msgScroll .conum:not([data-value]):empty {
+  display: none;
+}
+#msgScroll dt, #msgScroll th.tableblock, #msgScroll td.content, #msgScroll div.footnote {
+  text-rendering: optimizeLegibility;
+}
+#msgScroll h1, #msgScroll h2, #msgScroll p, #msgScroll td.content, #msgScroll span.alt {
+  letter-spacing: -0.01em;
+}
+#msgScroll p strong, #msgScroll td.content strong, #msgScroll div.footnote strong {
+  letter-spacing: -0.005em;
+}
+#msgScroll p, #msgScroll blockquote, #msgScroll dt, #msgScroll td.content, #msgScroll span.alt {
+  font-size: 1.0625rem;
+}
+#msgScroll p {
+  margin-bottom: 1.25rem;
+}
+#msgScroll .sidebarblock p, #msgScroll .sidebarblock dt, #msgScroll .sidebarblock td.content, #msgScroll p.tableblock {
+  font-size: 1em;
+}
+#msgScroll .exampleblock > .content {
+  background-color: #fffef7;
+  border-color: #e0e0dc;
+  -webkit-box-shadow: 0 1px 4px #e0e0dc;
+  box-shadow: 0 1px 4px #e0e0dc;
+}
+#msgScroll .print-only {
+  display: none !important;
+}
+@media print {
+  #msgScroll * {
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  #msgScroll html {
+    font-size: 80%;
+  }
+  #msgScroll a {
+    color: inherit !important;
+    text-decoration: underline !important;
+  }
+  #msgScroll a.bare, #msgScroll a[href^="#"], #msgScroll a[href^="mailto:"] {
+    text-decoration: none !important;
+  }
+  #msgScroll a[href^="http:"]:not(.bare)::after, #msgScroll a[href^="https:"]:not(.bare)::after {
+    content: "(" attr(href) ")";
+    display: inline-block;
+    font-size: 0.875em;
+    padding-left: 0.25em;
+  }
+  #msgScroll abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+  #msgScroll pre, #msgScroll blockquote, #msgScroll tr, #msgScroll img, #msgScroll object, #msgScroll svg {
+    page-break-inside: avoid;
+  }
+  #msgScroll thead {
+    display: table-header-group;
+  }
+  #msgScroll svg {
+    max-width: 100%;
+  }
+  #msgScroll p, #msgScroll blockquote, #msgScroll dt, #msgScroll td.content {
+    font-size: 1em;
+    orphans: 3;
+    widows: 3;
+  }
+  #msgScroll h2, #msgScroll h3, #msgScroll #toctitle, #msgScroll .sidebarblock > .content > .title {
+    page-break-after: avoid;
+  }
+  #msgScroll #toc, #msgScroll .sidebarblock, #msgScroll .exampleblock > .content {
+    background: none !important;
+  }
+  #msgScroll #toc {
+    border-bottom: 1px solid #ddddd8 !important;
+    padding-bottom: 0 !important;
+  }
+  #msgScroll body.book #header {
+    text-align: center;
+  }
+  #msgScroll body.book #header > h1:first-child {
+    border: 0 !important;
+    margin: 2.5em 0 1em;
+  }
+  #msgScroll body.book #header .details {
+    border: 0 !important;
+    display: block;
+    padding: 0 !important;
+  }
+  #msgScroll body.book #header .details span:first-child {
+    margin-left: 0 !important;
+  }
+  #msgScroll body.book #header .details br {
+    display: block;
+  }
+  #msgScroll body.book #header .details br + span::before {
+    content: none !important;
+  }
+  #msgScroll body.book #toc {
+    border: 0 !important;
+    text-align: left !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  #msgScroll body.book #toc, #msgScroll body.book #preamble, #msgScroll body.book h1.sect0, #msgScroll body.book .sect1 > h2 {
+    page-break-before: always;
+  }
+  #msgScroll .listingblock code[data-lang]::before {
+    display: block;
+  }
+  #msgScroll #footer {
+    padding: 0 0.9375em;
+  }
+  #msgScroll .hide-on-print {
+    display: none !important;
+  }
+  #msgScroll .print-only {
+    display: block !important;
+  }
+  #msgScroll .hide-for-print {
+    display: none !important;
+  }
+  #msgScroll .show-for-print {
+    display: inherit !important;
+  }
+}
+@media print, amzn-kf8 {
+  #msgScroll #header > h1:first-child {
+    margin-top: 1.25rem;
+  }
+  #msgScroll .sect1 {
+    padding: 0 !important;
+  }
+  #msgScroll .sect1 + .sect1 {
+    border: 0;
+  }
+  #msgScroll #footer {
+    background: none;
+  }
+  #msgScroll #footer-text {
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 0.9em;
+  }
+}
+@media amzn-kf8 {
+  #msgScroll #header, #msgScroll #content, #msgScroll #footnotes, #msgScroll #footer {
+    padding: 0;
+  }
+}
+
+/*# sourceMappingURL=asciidoc-modified.map */
