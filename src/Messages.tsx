@@ -1,48 +1,49 @@
 import * as React from 'react'
 import { observer } from 'mobx-react'
 import State from './AppState'
-import InfiniteScroll from 'react-infinite-scroller'
+import Waypoint from 'react-waypoint'
 import AdMsg from './AdMsgBlock'
+import { observe, observable } from 'mobx';
 
 @observer
 export default class Messages extends React.Component<{}, {
-    done: boolean
+    init: boolean,
 }> {
     msgArea = React.createRef<HTMLTextAreaElement>()
+    scrollWrapper = React.createRef<HTMLDivElement>()
+    lastLoaded = -1
+    currentlyLoading = -2
     constructor(props) {
         super(props)
         this.state = {
-            done: false,
+            init: false,
         }
+    }
+    componentDidMount () {
+        observe(State, 'currentGroup', () => {
+            State.currentMsgs = observable.array([])
+            this.lastLoaded = -1
+            this.currentlyLoading = -1
+        })
     }
     render () {
         return (
             <div style={wrapper}>
                 <h1>Messages</h1>
-                <InfiniteScroll
-                    pageStart={0}
-                    loadMore={(idx) => {
-                    State.nrc.getMessages(State.currentGroup.id, idx)
-                        .then(({page, count, msgs}) => {
-                            State.currentMsgs = State.currentMsgs.concat(msgs)
-                            this.setState({
-                                done: msgs.length < count
-                            })
-                        }) 
-                    }}
-                    loader={<div className="loader" key={0}>Loading ...</div>}
-                    hasMore={!this.state.done}
-                    useWindow={false}
-                    initialLoad={false}
+                <div
+                    ref={this.scrollWrapper}
                     style={scrollWrapper}
-                    isReverse={true}
-                    id="msgScroll">
+                    id="msgScroll"
+                    >
+                    <div style={waypoint}>
+                        <Waypoint onEnter={this.loadMore} />
+                    </div>
                     {
                         State.currentMsgs.slice(0).reverse().map((val, idx) => {
                             return (<AdMsg key={val.id} msg={val} />)
                         })
                     }
-                </InfiniteScroll>
+                </div>
                 <div style={sendWrapper}>
                     <textarea 
                         ref={this.msgArea}
@@ -68,6 +69,36 @@ export default class Messages extends React.Component<{}, {
         State.nrc.sendMessage(State.currentGroup.id, this.msgArea.current.value)
         this.msgArea.current.value = ''
     }
+    loadMore = () => {
+        console.log('attempt load');
+        if(this.currentlyLoading == this.lastLoaded) {
+            //last load was complete
+            this.currentlyLoading++
+            console.log('sending req for '+this.currentlyLoading)
+            State.nrc.getMessages(State.currentGroup.id, this.currentlyLoading)
+                .then(({page, count, msgs}) => {
+                    const oldHeight = this.scrollWrapper.current.scrollHeight
+                    State.currentMsgs = State.currentMsgs.concat(msgs)
+                    if(page == 0) {
+                        State.scrollMsgToBot()
+                    }
+                    else {
+                        const newHeight = this.scrollWrapper.current.scrollHeight
+                        console.log('added '+(newHeight-oldHeight)+" height")
+                        this.goToPrevScroll(oldHeight)
+                    }
+                    this.lastLoaded = msgs.length < count ? -1 : page //if done, set lastLoaded to -1 to stop further loads
+                })
+        }
+    }
+    goToPrevScroll = (oldScrollHeight) => {
+        console.log('reverting to scroll '+oldScrollHeight)
+        const list = this.scrollWrapper.current
+        //disable scrollbar for a while so the user can't overwrite the scroll bouncing
+        list.style.overflow = 'hidden'
+        list.scrollTop = list.scrollHeight - oldScrollHeight
+        list.style.overflowY = 'scroll'
+    }
 }
 
 const wrapper: React.CSSProperties = {
@@ -81,6 +112,11 @@ const scrollWrapper: React.CSSProperties = {
     overflowY: 'scroll',
     overflowX: 'hidden',
     wordBreak: 'break-all'
+}
+const waypoint: React.CSSProperties = {
+    width: '100%',
+    height: 30,
+    backgroundColor: 'purple',
 }
 const sendWrapper: React.CSSProperties = {
     display: 'flex',

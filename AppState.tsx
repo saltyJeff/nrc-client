@@ -1,5 +1,6 @@
 import { observable, observe } from 'mobx'
-import { Nrc, GroupData, AdMsg, UserData, Post } from './nrc';
+import { Nrc, GroupData, UserData } from './nrc';
+import frametalk from 'frametalk'
 import * as React from 'react'
 import * as ReactDOM from 'react-dom';
 import Application from './App'
@@ -12,10 +13,8 @@ class AppState {
 		id: -1,
 		name: 'bleh'
 	}
-	@observable currentGroupMembers: UserData[] = observable.array()
-	@observable currentMsgs: AdMsg[] = observable.array([])
-	@observable currentPosts: Post[] = observable.array([])
-
+	msgWindow: Window
+	postWindow: Window
 	constructor () {
 	}
 	startNrc = async (token) => {
@@ -27,16 +26,17 @@ class AppState {
 		document.querySelector<HTMLDivElement>('#app').style.display = 'block'
 		ReactDOM.render(<Application />, document.querySelector<HTMLDivElement>('#app'))
 
+		//open windows
+		this.msgWindow = window.open('../Messages/')
+		this.postWindow = window.open('../Posts')
+
+		//broadcast userdata
+		this.sendToAllWindows('userData', this.userData)
 
 		observe(this, 'currentGroup', () => {
 			console.log('group changed')
-			
-			this.nrc.getPosts(this.currentGroup.id, 0)
-				.then(({page, count, posts}) => {
-					this.currentPosts = observable.array(posts)
-					this.scrollPostToTop()
-				})
-		}, false)
+			this.sendToAllWindows('groupChange', this.currentGroup)
+		})
 
 		//bind hooks
 		this.nrc.onAddedToGroup = (groupData) => {
@@ -50,13 +50,10 @@ class AppState {
 			}
 		}
 		this.nrc.onMsgRecieve = (adMsg) => {
-			this.currentMsgs.unshift(adMsg)
-			if(adMsg.from == this.userData.id) {
-				this.scrollMsgToBot()
-			}
+			frametalk.send(this.msgWindow, 'msgReceive', adMsg)
 		}
 		this.nrc.onPostRecieve = (post) => {
-			this.currentPosts.unshift(post)
+			frametalk.send(this.postWindow, 'postReceive', post)
 		}
 		this.nrc.onError = (e) => {
 			alert(
@@ -65,13 +62,9 @@ ${e.type}:
 ${e.reason}`)
 		}
 	}
-	scrollMsgToBot = () => {
-		const objDiv = document.querySelector('#msgScroll')
-		objDiv.scrollTop = objDiv.scrollHeight
-	}
-	scrollPostToTop = () => {
-		const objDiv = document.querySelector('#postScroll')
-		objDiv.scrollTop = 0
+	sendToAllWindows(evtName: string, data: any) {
+		frametalk.send(this.msgWindow, evtName, data)
+		frametalk.send(this.postWindow, evtName, data)
 	}
 }
 let state = new AppState();
