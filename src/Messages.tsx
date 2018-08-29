@@ -6,18 +6,13 @@ import AdMsg from './AdMsgBlock'
 import { observe, observable } from 'mobx';
 
 @observer
-export default class Messages extends React.Component<{}, {
-    init: boolean,
-}> {
+export default class Messages extends React.Component<{}, {}> {
     msgArea = React.createRef<HTMLTextAreaElement>()
     scrollWrapper = React.createRef<HTMLDivElement>()
     lastLoaded = -1
     currentlyLoading = -2
     constructor(props) {
         super(props)
-        this.state = {
-            init: false,
-        }
     }
     componentDidMount () {
         observe(State, 'currentGroup', () => {
@@ -96,7 +91,7 @@ export default class Messages extends React.Component<{}, {
         const list = this.scrollWrapper.current
         //disable scrollbar for a while so the user can't overwrite the scroll bouncing
         list.style.overflow = 'hidden'
-        list.scrollTop = list.scrollHeight - oldScrollHeight
+        list.scrollTop = list.scrollHeight - oldScrollHeight + list.scrollTop
         list.style.overflowY = 'scroll'
     }
 }

@@ -20,23 +20,12 @@ class AppState {
 	}
 	startNrc = async (token) => {
 		console.log('acquired token')
-		this.userData = await this.nrc.login('ws://localhost:8080/nrc', token)
+		this.userData = await this.nrc.login(window.prompt('Server URL', 'ws://localhost:8080/nrc'), token)
 		console.log('login success to server')
 
 		document.querySelector<HTMLDivElement>('#login').style.display = 'none'
 		document.querySelector<HTMLDivElement>('#app').style.display = 'block'
 		ReactDOM.render(<Application />, document.querySelector<HTMLDivElement>('#app'))
-
-
-		observe(this, 'currentGroup', () => {
-			console.log('group changed')
-			
-			this.nrc.getPosts(this.currentGroup.id, 0)
-				.then(({page, count, posts}) => {
-					this.currentPosts = observable.array(posts)
-					this.scrollPostToTop()
-				})
-		}, false)
 
 		//bind hooks
 		this.nrc.onAddedToGroup = (groupData) => {

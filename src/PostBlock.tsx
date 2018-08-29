@@ -51,6 +51,7 @@ export default class PostBlock extends React.Component<{
     }
 }
 const wrapper: React.CSSProperties = {
-    width: '500px',
+    minWidth: '300px',
+    width: '32%',
     minHeight: '200px'
 }
