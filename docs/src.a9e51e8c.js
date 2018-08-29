@@ -484,4 +484,4 @@ var global=arguments[3],process=require("process"),define,__dirname="D:\\Jeffers
 },{"mobx":"ZeFp","./nrc":"hXve","react":"+UVH","react-dom":"zPAQ","./App":"VvOQ"}],"de3p":[function(require,module,exports) {
 "use strict";var e=this&&this.__importDefault||function(e){return e&&e.__esModule?e:{default:e}};Object.defineProperty(exports,"__esModule",{value:!0});var t=e(require("./AppState")),u={signInOptions:[firebase.auth.GoogleAuthProvider.PROVIDER_ID],callbacks:{signInSuccessWithAuthResult:function(){return!1}},signInFlow:"popup"},r=new firebaseui.auth.AuthUI(firebase.auth());r.start("#firebaseui-auth-container",u),firebase.auth().onAuthStateChanged(function(e){return e&&e.getIdToken().then(t.default.startNrc),!1});
 },{"./AppState":"BLti"}]},{},["de3p"], null)
-//# sourceMappingURL=/src.cc41239c.map
+//# sourceMappingURL=https://saltyjeff.github.io/nrc-client/src.cc41239c.map
