@@ -1,5 +1,5 @@
-# react-ts-mobx-parcel-starter
-Boilerplate for simple projects
+# NRC-Client
+Frontend for NRC
 
 # Run
 
